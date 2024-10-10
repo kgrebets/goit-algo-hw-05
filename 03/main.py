@@ -10,7 +10,7 @@ def load_text(file_path):
 
 def measure_time(search_func, text, pattern):
     timer = timeit.Timer(lambda: search_func(text, pattern))
-    return timer.timeit(number=1)
+    return timer.timeit(number=50)
 
 def compare_algorithms(file_path, existing_substr, non_existing_substr):
     text = load_text(file_path)
